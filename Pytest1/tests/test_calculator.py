@@ -8,7 +8,7 @@ def test_add_wrong():
     assert calculator.add_wrong(8,12) == 20
 
 def test_substract():
-    assert calculator.subtract(12,8) == 4
+    assert calculator.substract(12,8) == 4
     
 def test_multiply():
     assert calculator.multiply(8,12) == 96

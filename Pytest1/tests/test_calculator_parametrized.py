@@ -35,3 +35,38 @@ def test_add_2():
 )
 def test_add_wrong_parametrized(x, y, expected):
     assert calculator.add_wrong(x,y) == expected
+
+@pytest.mark.parametrize( "k,l, expected",
+    [
+        (1,2,-1),
+        (0,5,-5),
+        (-2,9,-11),
+        (5,-8,13),
+    ]
+)
+def test_substract_parametrized(k, l, expected):
+    assert calculator.substract(k,l) == expected
+
+
+
+@pytest.mark.parametrize( "m,n, expected",
+    [
+        (1,2,2),
+        (0,5,0),
+        (-2,9,-18),
+        (5,-8,-40),
+    ]
+)
+def test_multiply_parametrized(m, n, expected):
+    assert calculator.multiply(m,n) == expected
+
+@pytest.mark.parametrize( "o,p, expected",
+    [
+        (1,2,2),
+        (0,5,0),
+        (-2,9,-18),
+        (5,-8,-40),
+    ]
+)
+def test_multiply_Wrong_parametrized(o,p, expected):
+    assert calculator.multiply_wrong(o,p) == expected
